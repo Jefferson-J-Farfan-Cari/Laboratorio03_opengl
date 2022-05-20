@@ -14,26 +14,26 @@ public class Piramide {
 
 
     private float[] vertices = {
-            -1.0f, -1.0f, -1.0f,
-            1.0f, -1.0f, -1.0f,
-            1.0f, -1.0f,  1.0f,
-            -1.0f, -1.0f,  1.0f,
-            0.0f,  1.0f,  0.0f
+            -1.0f,  -1.0f,  -1.0f,    // 0. left-bottom-back
+            1.0f,   -1.0f,  -1.0f,     // 1. right-bottom-back
+            1.0f,   -1.0f,  1.0f,     // 2. right-bottom-front
+            -1.0f,  -1.0f,  1.0f,    // 3. left-bottom-front
+            0.0f,   1.0f,   0.0f      // 4. top
     };
 
     private float[] colores = {
-            0.0f, 0.0f, 1.0f, 1.0f,
-            0.0f, 1.0f, 0.0f, 1.0f,
-            0.0f, 0.0f, 1.0f, 1.0f,
-            0.0f, 1.0f, 0.0f, 1.0f,
-            1.0f, 0.0f, 0.0f, 1.0f
+            0.0f, 0.0f, 1.0f, 1.0f,  // 0. blue
+            0.0f, 1.0f, 0.0f, 1.0f,  // 1. green
+            1.0f, 0.0f, 1.0f, 1.0f,  // 2. violet
+            1.0f, 0.5f, 0.0f, 1.0f,  // 3. orange
+            1.0f, 0.0f, 0.0f, 1.0f   // 4. red
     };
 
     private byte[] indices = {
-            2, 4, 3,
-            1, 4, 2,
-            0, 4, 1,
-            4, 0, 3
+            2, 4, 3,   // front face
+            1, 4, 2,   // right face
+            0, 4, 1,   // back face
+            4, 0, 3    // left face
     };
 
     public Piramide()
